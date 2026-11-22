@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Lesotho</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Center Aligned Header -->
+    <header class="py-4 shadow-sm">
+        <nav class="container text-center d-flex flex-column align-items-center gap-2">
+            <span class="text-white h2-font-size">🏔️ Visit Lesotho</span>
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                <a class="nav-link px-2" href="index.html">Home</a>
+                <a class="nav-link px-2" href="about.html">Places</a>
+                <a class="nav-link px-2" href="gallery.html">Library</a>
+                <a class="nav-link px-2 fw-bold" href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="mb-4 text-center fw-bold bg-white p-3 rounded shadow-sm d-inline-block">Get in Touch With Us</h2>
+        <div class="row g-4">
+            
+            <!-- Live Booking Multiplier Section (Updated to Maluti) -->
+            <div class="col-md-6">
+                <div class="content-box border">
+                    <h3>Tour Ticket Calculator</h3>
+                    <p class="text-muted">General park entry admission is M50 per tourist group path ticket.</p>
+                    <div class="mb-3">
+                        <label class="form-label">How many tickets do you need?</label>
+                        <input type="number" id="ticketValue" class="form-control" value="1" min="1" oninput="runMultiplication()">
+                    </div>
+                    <h5 class="text-success">Calculated Booking Total: M<span id="mathOutput">50</span></h5>
+                </div>
+            </div>
+
+            <!-- Custom Form Intercept Area -->
+            <div class="col-md-6">
+                <div class="content-box border">
+                    <h3>Send Us an Email Inquiry</h3>
+                    <form onsubmit="handleInquirySubmission(event)">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name:</label>
+                            <input type="text" id="visitorBoxName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Submit Information</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Center Aligned Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="h2-font-size text-white">🏔️ Lesotho Travel &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        function runMultiplication() {
+            let inputAmount = document.getElementById("ticketValue").value;
+            // Falls back to 0 if the field is cleared
+            if (inputAmount < 0 || inputAmount === "") {
+                inputAmount = 0;
+            }
+            let combinedAnswer = inputAmount * 50;
+            document.getElementById("mathOutput").innerText = combinedAnswer;
+        }
+
+        function handleInquirySubmission(event) {
+            event.preventDefault();
+            let explicitName = document.getElementById("visitorBoxName").value;
+            alert("Thank you, " + explicitName + "! Your details were saved successfully.");
+        }
+    </script>
+</body>
+</html>

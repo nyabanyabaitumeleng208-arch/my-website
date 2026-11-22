@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Lesotho Tourism</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body id="myBody">
+
+    <!-- Center Aligned Header -->
+    <header class="py-4 shadow-sm">
+        <nav class="container text-center d-flex flex-column align-items-center gap-2">
+            <span class="text-white h2-font-size">🏔️ Visit Lesotho</span>
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                <a class="nav-link px-2 fw-bold" href="index.html">Home</a>
+                <a class="nav-link px-2" href="about.html">Places</a>
+                <a class="nav-link px-2" href="gallery.html">Library</a>
+                <a class="nav-link px-2" href="contact.html">Contact</a>
+                <button class="btn btn-sm btn-warning ms-2" onclick="toggleTheme()">Switch Theme</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="container my-5">
+        
+        <!-- Combined Hero Header Content Box Area -->
+        <div class="hero-bg-section shadow">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">The Kingdom in the Sky</h2>
+                <p class="lead max-width-600 mx-auto mt-3">Discover spectacular high-altitude landscapes, ancient history, and vibrant local mountain culture.</p>
+                <a href="about.html" class="btn btn-warning btn-lg mt-3 fw-bold">Explore Places To Visit</a>
+            </div>
+
+            <!-- Content row inside the green banner to completely eliminate the white layout separation space -->
+            <div class="row g-4 mt-4 text-start">
+                <section class="col-md-8">
+                    <article class="p-4 bg-white text-dark rounded shadow-sm h-100">
+                        <h3 class="fw-bold">An Introduction to Our Guide</h3>
+                        <p>Welcome to our introductory travel showcase dashboard for the beautiful nation of Lesotho! This online assignment project functions as an open informational travel hub built intentionally to guide you step-by-step through our country's mountain peaks, scenic rivers, and cultural destinations.</p>
+                        <p>Lesotho features an entirely unique spatial geography. It is completely landlocked within South Africa, holding the prestigious global distinction of being the only nation on earth located entirely above one thousand meters in base elevation.</p>
+                        <p>Because of this high elevation, the entire region enjoys cool mountain air, rugged cliff valleys, and clear rivers that flow down into massive alpine dam reservoirs. Whether you are looking for an action-packed trekking holiday or a relaxed journey into timeless African traditions, Lesotho welcomes everyone with warm hospitality.</p>
+                    </article>
+                </section>
+
+                <!-- Quick Facts Section -->
+                <aside class="col-md-4 text-white d-flex flex-column justify-content-center">
+                    <h4 class="fw-bold">High-Altitude Quick Facts</h4>
+                    <hr class="border-white opacity-75">
+                    <ul class="ps-3">
+                        <li class="mb-2"><strong>Highest Point:</strong> Thabana Ntlenyana peak height.</li>
+                        <li class="mb-2"><strong>Activities:</strong> Horseback trail riding, hiking, winter skiing.</li>
+                        <li class="mb-2"><strong>Tradition:</strong> Famous Basotho blanket history culture.</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Center Aligned Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="h2-font-size text-white">🏔️ Lesotho Travel &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.getElementById("myBody").classList.toggle("simple-dark-mode");
+        }
+    </script>
+</body>
+</html>

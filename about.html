@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photo Library - Lesotho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body { background: #c8e6c9; }
+        header, footer { background-color: #0b3d2e; }
+        .nav-link { color: white !important; }
+        .nav-link:hover, .nav-link.active { text-decoration: underline; }
+        .content-box { background: white; padding: 20px; border-radius: 10px; }
+        .place-img { width: 100%; height: 320px; object-fit: cover; border-radius: 0 0 8px 8px; display: block; margin: 0 auto; }
+        .pic-title {
+            font-weight: bold;
+            text-align: center !important;
+            margin-bottom: 0;
+            width: 100%;
+            background: #198754;
+            color: white;
+            padding: 10px 5px;
+            border-radius: 8px 8px 0 0;
+        }
+        .section-title { text-align: center; }
+        .navbar-toggler { border-color: white; }
+        .navbar-toggler-icon { filter: invert(1); }
+        @media (max-width: 768px) {
+            .place-img { height: 260px; }
+            .content-box { padding: 15px; }
+            h2 { font-size: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .place-img { height: auto; max-height: 280px; }
+            .content-box { padding: 12px; }
+            h2 { font-size: 1.3rem; }
+            main { padding-left: 12px; padding-right: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="py-2 shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark container">
+            <a class="navbar-brand fw-bold mx-auto mx-md-0" href="index.html">🏔️ Visit Lesotho</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center justify-content-md-end" id="mainNav">
+                <ul class="navbar-nav text-center gap-1 gap-md-2">
+                    <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="about.html">Places</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 fw-bold active" href="gallery.html">Library</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4 my-md-5">
+        <h2 class="text-center mb-2 fw-bold">Our Media Photo Library</h2>
+        <p class="text-center text-muted mb-4 mb-md-5 px-2">Click on any photo below to trigger a quick text notification pop-up alert.</p>
+
+        <!-- ROW 1: Semonkong + Thaba Bosiu Hill -->
+        <section class="content-box mb-4 shadow-sm">
+            <h4 class="mb-3 fw-bold section-title">Semonkong & Thaba Bosiu</h4>
+            <div class="row g-3 justify-content-center text-center">
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Semonkong Region</p>
+                    <img src="semonkong.jpg" alt="Semonkong region" class="place-img img-fluid" onclick="alert('Viewing: Semonkong Region')" style="cursor: pointer;">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Thaba Bosiu Hill</p>
+                    <img src="thaba bosiu.jpg" alt="Thaba Bosiu hill" class="place-img img-fluid" onclick="alert('Viewing: Thaba Bosiu Hill')" style="cursor: pointer;">
+                </div>
+            </div>
+        </section>
+
+        <!-- ROW 2: Katse Dam + Maloti Park -->
+        <section class="content-box mb-4 shadow-sm">
+            <h4 class="mb-3 fw-bold section-title">Katse Dam & Maloti Park</h4>
+            <div class="row g-3 justify-content-center text-center">
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Katse Dam</p>
+                    <img src="katsedam.jpg" alt="Katse Dam" class="place-img img-fluid" onclick="alert('Viewing: Katse Dam')" style="cursor: pointer;">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Maloti Park</p>
+                    <img src="malutipark.jpg" alt="Maloti Park" class="place-img img-fluid" onclick="alert('Viewing: Maloti Park')" style="cursor: pointer;">
+                </div>
+            </div>
+        </section>
+
+        <!-- ROW 3: Your previous pictures - kept -->
+        <section class="content-box mb-4 shadow-sm">
+            <h4 class="mb-3 fw-bold section-title">More Places</h4>
+            <div class="row g-3 justify-content-center text-center">
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Drakensberg</p>
+                    <img src="Drakensberg.jpg" alt="Drakensberg mountains" class="place-img img-fluid" onclick="alert('Viewing: Highland Grasslands Profile')" style="cursor: pointer;">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Maletsunyane Falls</p>
+                    <img src="image.jpg" alt="Maletsunyane Falls" class="place-img img-fluid" onclick="alert('Viewing: Maletsunyane Falls Gorge')" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center text-center mt-3">
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Mountain Stream</p>
+                    <img src="maletsunyanefalls.jpg" alt="Mountain stream" class="place-img img-fluid" onclick="alert('Viewing: Fresh Mountain Catchment Streams')" style="cursor: pointer;">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">Thaba-Bosiu Cultural Village</p>
+                    <img src="Thaba-Bosiu-Cultural-Village.jpeg" alt="Basotho cultural village" class="place-img img-fluid" onclick="alert('Viewing: Rural Highlands Basotho Hut Path')" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center text-center mt-3">
+                <div class="col-12 col-md-6">
+                    <p class="pic-title">National Monument</p>
+                    <img src="national monument.jpg" alt="National monument" class="place-img img-fluid" onclick="alert('Viewing: Mountain Trekking Equestrian Trail')" style="cursor: pointer;">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-4 mt-4">
+        <div class="container text-center">
+            <p class="fs-5 text-white mb-0">🏔️ Lesotho Travel &copy; 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
